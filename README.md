@@ -105,31 +105,33 @@ I write some class to move and control the object and print point over it.
 
 
 ### DOC : Important Project files ###
-***MainWindow.xaml*** =  the XAML file which describe the 3d scene. to add or remove object from the scene we have to edit it.
-***MainWindow.xaml.cs*** = c# file contain the MainWindow() that initiate the WPF interface, and other functions that create point and handle button click event.
-***Trackball.cs*** = define a Trackball class that help us to move rotate and zoom any 3d object.
-
+	<ol>
+	<li>***MainWindow.xaml*** =  the XAML file which describe the 3d scene. to add or remove object from the scene we have to edit it.</li>
+<li>***MainWindow.xaml.cs*** = c# file contain the MainWindow() that initiate the WPF interface, and other functions that create point and handle button click event.</li>
+<li>***Trackball.cs*** = define a Trackball class that help us to move rotate and zoom any 3d object.</li>
+	</ol>
 ####MainWindow.xaml.cs functions ####
-***create_cube(double x,double y, double z)***   add 3d point  to the scene using a x,y,z coordinates of the point.
-***Tessellate(double x,double y,double z)*** draw the 3d object using its x,y,z
-***BuildSolid()*** this function create a new trackball to give us the possibility to use the trackball class, which allow us to control the 3object and moving the 3d camera.
-***public class Freel : INotifyPropertyChanged*** //unused class(deprecated)
-***move_left*** function that handle left button press on the WPf interface
-***Button_Click_2***  initiate a new trackball object to remove previous 3d movement and reinitialise it.
+<ol>
+<li>***create_cube(double x,double y, double z)***   add 3d point  to the scene using a x,y,z coordinates of the point.</li>
+<li>***Tessellate(double x,double y,double z)*** draw the 3d object using its x,y,z.</li>
+<li>***BuildSolid()*** this function create a new trackball to give us the possibility to use the trackball class, which allow us to control the 3object and moving the 3d camera.</li>
+<li>***public class Freel : INotifyPropertyChanged*** //unused class(deprecated)</li>
+<li>***move_left*** function that handle left button press on the WPf interface.</li>
+<li>***Button_Click_2***  initiate a new trackball object to remove previous 3d movement and reinitialise it.</li>
 
-***MouseHitTest*** this function is executed when the "add point" button is pressed. 
-it give us the 3d coordinates of the click point over the 3d object. this function has a callback which is HitTestResultBehavior ResultCallback(HitTestResult result).
-***HitTestResultBehavior ResultCallback(HitTestResult result)*** this function pass the 3d point click coordinates to the create_cube function to create the 3points.
-
+<li>***MouseHitTest*** this function is executed when the "add point" button is pressed. it gives us the 3d coordinates of the click point over the 3d object. this function has a callback which is HitTestResultBehavior ResultCallback(HitTestResult result).</li>
+<li>***HitTestResultBehavior ResultCallback(HitTestResult result)*** this function pass the 3d point click coordinates to the create_cube function to create the 3points.</li>
+</ol>
 ####trackball.cs functions###
+<ol>
+<li>***void move_down(object sender, RoutedEventArgs e)***   zoom  and scale using the middle mouse button</li>
 
-***void move_down(object sender, RoutedEventArgs e)***   zoom  and scale using the middle mouse button
-
-***public void click(object sender, RoutedEventArgs e,int direction)***  rotate the object .The rotation angle is determined by the direction value .UP or Down movement.
+<li>***public void click(object sender, RoutedEventArgs e,int direction)***  rotate the object .The rotation angle is determined by the direction value .UP or Down movement.</li>
  
-public void left_right(object sender, RoutedEventArgs e, int direction)*** rotate the object to left or right.
+<li>***public void left_right(object sender, RoutedEventArgs e, int direction)*** rotate the object to left or right.</li>
 	
-***public void btn_zoom(object sender, RoutedEventArgs e,int i)***   Zoom function
+<li>***public void btn_zoom(object sender, RoutedEventArgs e,int i)***   Zoom function</li>
 
-***public void Trans_obj(object sender, RoutedEventArgs e, int i)***  translate object up/down/left/right
+<li>***public void Trans_obj(object sender, RoutedEventArgs e, int i)***  translate object up/down/left/right</li>
 	  
+</ol>
