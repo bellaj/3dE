@@ -81,6 +81,20 @@ second I imported the resulted Xaml file into your WPF.
                 </ModelVisual3D>
 
 
+this represent the Elements of a 3D scene
+    Viewport3D
+    The viewport is the control that builds the gate between the 2D and the 3D world.
+    Camera
+    Every 3D scene has excactly one camera. The camera defines the Position and the LookDirection and the UpDirection of the viewer. WPF supports orthographical and perspective cameras.
+    3D Models
+    A 3D model defines an object in the scene. It has a Geometry that is the mesh and a Material that can be a diffuse, specular or emmisive material. The material itself has a brush.
+    Lights
+    Without any lights you see nothing. So we need to place at least one light in our scene to illuminate our models. WPF supports different kind of lights, like:
+        AmbientLight
+        DirectionalLight
+        PointLight
+        SpotLight
+
 
 I write some class to move and control the object and print point over it.
 
