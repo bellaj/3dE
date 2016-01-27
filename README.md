@@ -1,8 +1,8 @@
 #3DE Project#
 
-3DE project is a WPF application manipulating a 3d object (this project i used a 3d model of an ear for a medical application). 
-the user could manipulate the 3d object (zoom, rotate, ...) and add points(labels) over the object. the 3d object used in this project could be remplaced by any other model 
-The project is opensource, please feel free to hack it and to give me your feedback.
+3DE project is a WPF application manipulating a 3d object (in this project, i used a 3d model of an ear for a medical application). 
+the users (doctors or medicine students) could manipulate the 3d object (zoom, rotate, ...) and add points(labels) over the object. the 3d model used in this project could be remplaced by any other objetc and it could be adapted to many fields. 
+The project ***is opensource***, please feel free to hack it and to give me your feedback, ****please refer this project in case you use it****.
 
 ##screenshots##
 
