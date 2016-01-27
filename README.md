@@ -135,3 +135,5 @@ I write some class to move and control the object and print point over it.
 <li>***public void Trans_obj(object sender, RoutedEventArgs e, int i)***  translate object up/down/left/right</li>
 	  
 </ol>
+
+more comments are included in the project files
