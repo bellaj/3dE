@@ -61,15 +61,15 @@ clean the project and start the compilation. when the WPF prompt you can manipul
 
 #### how i developed this software ####
 Very important :
-*First* I generated Xaml file using blind of the Maya Scene object. 
-*second* I imported the resulted Xaml file into your WPF.
+*First* I generated the Xaml file using blind of the Maya Scene object(*.obj). you will get a big list of numbers.
+*second* I imported the resulted Xaml file into the WPF XAML, you could insert directly the <ModelVisual3D markup as shown bellow .
 
 
                 <ModelVisual3D x:Name="ear_int_pCylinder5" >
                     <ModelVisual3D.Content>
                         <GeometryModel3D x:Name="ear_fullmodel_initialShadingGroup1" d:Bounds="-9.16475391387939,-46.0683822631836,-27.6348533630371,35.7756147384644,99.5968208312988,78.9489212036133">
                             <GeometryModel3D.Geometry>
-                                <MeshGeometry3D Normals="0.74546599,0.26000601,0.61374098 0.68966597,0.226951,0.687644 0.77292198,0.39004099,0.50046003 0.81725901,0.430608,0.38296801 0.61830401,0.087341003,0.78107101 0.73229402,0.220073,0.64444798 0.83498901,0.34669399,0.427313 0.81864899,0.50973803,0.26453999 0.81468803,0.55462497,0.16933601 0.55887598,-0.062263999,0.82691002 0.66710699,0.016923999,0.74476999 0.50940102,-0.162306,0.84508502 0.59502202,-0.106298,0.79664898,0.69070601,-0.0088980002,0.72308099 0.789868,0.138761,0.597372 0.85030699,0.30978,0.425457 0.85706401,0.049594998 0.807006">
+                                <MeshGeometry3D Normals="0.74546599,0.26000601,0.61374098 0.68966597,0.226951,0.687644 0.77292198,0.39004099,0.50046003 0.81725901,0.430608,0.38296801 0.61830401,0.087341003,0.78107101 0.73229402,0.220073,0.64444798 0.83498901,0.34669399,0.427313 0.81864899,0.50973803,0.26453999 0.81468803,0.55462497,0.16933601 0.55887598,-0.062263999,0.82691002 0.66710699,0.016923999,0.74476999 0.50940102,-0.162306,0.84508502 0.59502202,-0.106298,0.79664898,0.69070601,-0.0088980002,0.72308099 0.789868,0.138761,0.597372 0.85030699,0.30978,0.425457 0.85706401,0.049594998 0.807006..............">
 
   </GeometryModel3D.Geometry>
                             <GeometryModel3D.Material >
@@ -85,29 +85,22 @@ Very important :
 
 
 this represent the Elements of a 3D scene
-    Viewport3D
+****Viewport3D**** 
     The viewport is the control that builds the gate between the 2D and the 3D world.
-    Camera
+****Camera**** 
     Every 3D scene has excactly one camera. The camera defines the Position and the LookDirection and the UpDirection of the viewer. WPF supports orthographical and perspective cameras.
-    3D Models
+****3D Models****
     A 3D model defines an object in the scene. It has a Geometry that is the mesh and a Material that can be a diffuse, specular or emmisive material. The material itself has a brush.
-    Lights
-    Without any lights you see nothing. So we need to place at least one light in our scene to illuminate our models. WPF supports different kind of lights, like:
-        AmbientLight
-        DirectionalLight
-        PointLight
-        SpotLight
+
+In addition I write some class to move and control the object and print point over it.
 
 
-I write some class to move and control the object and print point over it.
-
-
-### DOC : Important Project files ###
-	<ol>
-	<li>***MainWindow.xaml*** =  the XAML file which describe the 3d scene. to add or remove object from the scene we have to edit it.</li>
-<li>***MainWindow.xaml.cs*** = c# file contain the MainWindow() that initiate the WPF interface, and other functions that create point and handle button click event.</li>
+### DOC : Important Project files###
+<ol>
+<li>***MainWindow.xaml*** the XAML file which describe the 3d scene. to add or remove object from the scene we have to edit it.</li>
+<li>***MainWindow.xaml.cs***  c# file contain the MainWindow() that initiate the WPF interface, and other functions that create point and handle button click event.</li>
 <li>***Trackball.cs*** = define a Trackball class that help us to move rotate and zoom any 3d object.</li>
-	</ol>
+</ol>
 ####MainWindow.xaml.cs functions ####
 <ol>
 <li>***create_cube(double x,double y, double z)***   add 3d point  to the scene using a x,y,z coordinates of the point.</li>
