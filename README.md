@@ -1,13 +1,16 @@
+#3DE Project#
 
-in this project i used a 3d model of an ear for a medical application, 
-the user could manipulate the 3d object (zoom, rotate, ...) and add marks over the object.
+3DE project is a WPF application manipulating a 3d object (this project i used a 3d model of an ear for a medical application). 
+the user could manipulate the 3d object (zoom, rotate, ...) and add points(labels) over the object. the 3d object used in this project could be remplaced by any other model 
+The project is opensource, please feel free to hack it and to give me your feedback.
 
-the 3d object used in this project could be remplaced by any other model 
+##screenshots##
 
 ![alt tag](http://i66.tinypic.com/11l7y4w.png)
 
 ![alt tag](http://i64.tinypic.com/x1d20g.png)
 
+###General###
 if you want to manipulate a 3d object in a WPF you have to choose between :
 
     *Approach. You are in interest to put some .3ds(.obj,..) model object as stationary part of your scene without any interactive transformations (moving, scaling and so on). This approach is for simple playing (learning WPF3D) as a rule
@@ -16,9 +19,16 @@ if you want to manipulate a 3d object in a WPF you have to choose between :
 in 3dE project I demonstrate how to use a 3d model in WPF application using ModelVisual3D. the 3d model could be made using any 3d software like maya or blender.
 
 
+###Tools & prerequisites###
+Microsoft visual studio 2012
+4.5 .Net Framwork
+Blind Expression
+Windows 7 or higher
+4 .Net Framework
 
-In the SQL server 
-////////////////
+###setup###
+####Step 1####
+In the SQL server import the ear database or creat it :
 1- creat a Database : ear
 2-creat a table : Points_saved
 3- the Points_saved table contains : 4 coulouns 
@@ -30,32 +40,21 @@ frame
 color
 
 the tpye for these coloumns is  varchar40
-////////////////// 
-In the V studio 
-in the Mainwindwo.xaml.cs 
 
-change the connexion string     myConnection = new SqlConnection("Server=KHALIDBELLAJ-PC;Database=ear;Trusted_Connection=True");
+####step 2 : connexion string edition####
+
+using V studio 2012 open the Mainwindwo.xaml.cs change the connexion string   
+
+myConnection = new SqlConnection("Server=KHALIDBELLAJ-PC;Database=ear;Trusted_Connection=True");
 
 by your information(server...)
 
--------------
+####step 3 : compilation ####
 
-chen you start compilation you can add any point and when you restart again you ll get the previous points
+clean the project and start the compilation. when the WPF prompt you can manipulate the object and add any points the application will save them for the next start.
 
----------------Tools---
-Microsoft visual studio 2012
-4.5 .Net Framwork
-Blind Expression
-
-------------------
-prerequisites
-
-Windows 7 or higher
-4 .Net Framework
-
--------------how i develop this software-----------
-
-
+####how i develop this software ####
+Very important :
 First I generated Xaml file using blind of the Maya Scene object. 
 second I imported the resulted Xaml file into your WPF.
 
