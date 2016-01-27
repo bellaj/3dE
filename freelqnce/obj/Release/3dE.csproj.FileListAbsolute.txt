@@ -1,0 +1,11 @@
+H:\to github\freelqnce_2\freelqnce\obj\Release\3dE.csprojResolveAssemblyReference.cache
+H:\to github\freelqnce_2\freelqnce\obj\Release\MainWindow.g.cs
+H:\to github\freelqnce_2\freelqnce\obj\Release\App.g.cs
+H:\to github\freelqnce_2\freelqnce\obj\Release\MainWindow.baml
+H:\to github\freelqnce_2\freelqnce\bin\Release\3dE.exe
+H:\to github\freelqnce_2\freelqnce\bin\Release\3dE.pdb
+H:\to github\freelqnce_2\freelqnce\obj\Release\3dE_MarkupCompile.cache
+H:\to github\freelqnce_2\freelqnce\obj\Release\3dE_MarkupCompile.lref
+H:\to github\freelqnce_2\freelqnce\obj\Release\3dE.g.resources
+H:\to github\freelqnce_2\freelqnce\obj\Release\3dE.exe
+H:\to github\freelqnce_2\freelqnce\obj\Release\3dE.pdb

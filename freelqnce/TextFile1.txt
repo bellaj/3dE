@@ -1,0 +1,1 @@
+﻿Viewport3D (3D scene) that contained the various ModelVisual3D elements (3D objects).

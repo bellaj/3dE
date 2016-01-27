@@ -1,0 +1,10 @@
+H:\to github\freelqnce_2\freelqnce\obj\Debug\MainWindow.g.cs
+H:\to github\freelqnce_2\freelqnce\obj\Debug\App.g.cs
+H:\to github\freelqnce_2\freelqnce\obj\Debug\MainWindow.baml
+H:\to github\freelqnce_2\freelqnce\bin\Debug\3dE.exe
+H:\to github\freelqnce_2\freelqnce\bin\Debug\3dE.pdb
+H:\to github\freelqnce_2\freelqnce\obj\Debug\3dE_MarkupCompile.cache
+H:\to github\freelqnce_2\freelqnce\obj\Debug\3dE_MarkupCompile.lref
+H:\to github\freelqnce_2\freelqnce\obj\Debug\3dE.g.resources
+H:\to github\freelqnce_2\freelqnce\obj\Debug\3dE.exe
+H:\to github\freelqnce_2\freelqnce\obj\Debug\3dE.pdb
