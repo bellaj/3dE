@@ -6,6 +6,8 @@ the 3d object used in this project could be remplaced by any other model
 
 ![alt tag](http://i66.tinypic.com/11l7y4w.png)
 
+![alt tag](http://i64.tinypic.com/x1d20g.png)
+
 if you want to manipulate a 3d object in a WPF you have to choose between :
 
     *Approach. You are in interest to put some .3ds(.obj,..) model object as stationary part of your scene without any interactive transformations (moving, scaling and so on). This approach is for simple playing (learning WPF3D) as a rule
