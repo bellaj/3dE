@@ -20,26 +20,32 @@ in 3dE project I demonstrate how to use a 3d model in WPF application using Mode
 
 
 ###Tools & prerequisites###
-Microsoft visual studio 2012
-4.5 .Net Framwork
-Blind Expression
-Windows 7 or higher
-4 .Net Framework
-
+<ol start="1">
+ <li>Microsoft visual studio 2012</li>
+ <li>4.5 .Net Framwork</li>
+ <li>Blind Expression</li>
+ <li>Windows 7 or higher</li>
+ <li>.Net Framework 4</li>
+</ol>
 ###setup###
 ####Step 1####
+
+
 In the SQL server import the ear database or creat it :
-1- creat a Database : ear
-2-creat a table : Points_saved
-3- the Points_saved table contains : 4 coulouns 
-
-colx  
-coly
-colz
-frame
-color
-
-the tpye for these coloumns is  varchar40
+<ol start="1">
+ <li>creat a Database : ear</li>
+ <li>creat a table : Points_saved</li>
+ <li> the Points_saved table contains : 4 coulouns </ol>
+	<ol start="1">
+	<li>	colx  </li>
+	<li>	coly </li>
+	<li>	colz </li>
+	<li>	frame </li>
+	<li>	color </li>
+	</ol>
+</li>
+the type for these coloumns is  varchar40
+</ol>
 
 ####step 2 : connexion string edition####
 
@@ -98,45 +104,32 @@ this represent the Elements of a 3D scene
 I write some class to move and control the object and print point over it.
 
 
-------------Important Project files ----------
+### DOC : Important Project files ###
+***MainWindow.xaml*** =  the XAML file which describe the 3d scene. to add or remove object from the scene we have to edit it.
+***MainWindow.xaml.cs*** = c# file contain the MainWindow() that initiate the WPF interface, and other functions that create point and handle button click event.
+***Trackball.cs*** = define a Trackball class that help us to move rotate and zoom any 3d object.
 
-MainWindow.xaml =  the XAML file which describe the 3d scene. to add or remove object from the scene we have to edit it.
-MainWindow.xaml.cs = c# file contain the MainWindow() that initiate the WPF interface, and other functions that create point and handle button click event.
-Trackball.cs = define a Trackball class that help us to move rotate and zoom any 3d object.
+####MainWindow.xaml.cs functions ####
+***create_cube(double x,double y, double z)***   add 3d point  to the scene using a x,y,z coordinates of the point.
+***Tessellate(double x,double y,double z)*** draw the 3d object using its x,y,z
+***BuildSolid()*** this function create a new trackball to give us the possibility to use the trackball class, which allow us to control the 3object and moving the 3d camera.
+***public class Freel : INotifyPropertyChanged*** //unused class(deprecated)
+***move_left*** function that handle left button press on the WPf interface
+***Button_Click_2***  initiate a new trackball object to remove previous 3d movement and reinitialise it.
 
---------------------MainWindow.xaml.cs functions -------------
-create_cube(double x,double y, double z)   add 3d point  to the scene using a x,y,z coordinates of the point.
-
- Tessellate(double x,double y,double z) // draw the 3d object using its x,y,z
-
-
- BuildSolid() // this function create a new trackball to give us the possibility to use the trackball class, which allow us to control the 3object and moving the 3d camera.
-
-
-public class Freel : INotifyPropertyChanged //unused class(deprecated)
-
-move_left // function that handle left button press on the WPf interface
-
-Button_Click_2 //  initiate a new trackball object to remove previous 3d movement and reinitialise it.
-
-MouseHitTest // this function is executed when the "add point" button is pressed. 
+***MouseHitTest*** this function is executed when the "add point" button is pressed. 
 it give us the 3d coordinates of the click point over the 3d object. this function has a callback which is HitTestResultBehavior ResultCallback(HitTestResult result).
+***HitTestResultBehavior ResultCallback(HitTestResult result)*** this function pass the 3d point click coordinates to the create_cube function to create the 3points.
 
-HitTestResultBehavior ResultCallback(HitTestResult result)// this function pass the 3d point click coordinates to the create_cube function to create the 3points.
+####trackball.cs functions###
 
+***void move_down(object sender, RoutedEventArgs e)***   zoom  and scale using the middle mouse button
 
-
---------------------trackball.cs functions -------------
-
-
-void move_down(object sender, RoutedEventArgs e) // zoom  and scale using the middle mouse button
-
-public void click(object sender, RoutedEventArgs e,int direction)// rotate the object .The rotation angle is determined by the direction value .UP or Down movement.
+***public void click(object sender, RoutedEventArgs e,int direction)***  rotate the object .The rotation angle is determined by the direction value .UP or Down movement.
  
-public void left_right(object sender, RoutedEventArgs e, int direction) rotate the object to left or right.
+public void left_right(object sender, RoutedEventArgs e, int direction)*** rotate the object to left or right.
 	
-public void btn_zoom(object sender, RoutedEventArgs e,int i) // Zoom function
+***public void btn_zoom(object sender, RoutedEventArgs e,int i)***   Zoom function
 
- public void Trans_obj(object sender, RoutedEventArgs e, int i)// translate object up/down/left/right
-	 
-/////////////////////////////////////		  
+***public void Trans_obj(object sender, RoutedEventArgs e, int i)***  translate object up/down/left/right
+	  
