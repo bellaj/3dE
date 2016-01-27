@@ -1,17 +1,17 @@
 
+in this project i used a 3d model of an ear for a medical application, 
+the user could manipulate the 3d object (zoom, rotate, ...) and add marks over the object.
+
+the 3d object used in this project could be remplaced by any other model 
+
+![alt tag](http://i66.tinypic.com/11l7y4w.png)
+
 if you want to manipulate a 3d object in a WPF you have to choose between :
 
     *Approach. You are in interest to put some .3ds(.obj,..) model object as stationary part of your scene without any interactive transformations (moving, scaling and so on). This approach is for simple playing (learning WPF3D) as a rule
     *Approach. You are thinking to have full interactive part with support any WPF3D transformations within your Viewport3D. This approach is for rich 3D scene manipulations in professional application as a rule.
 
-in 3dE project I demonstrate how to use a 3d model in WPF application using ModelVisual3D.
-
-the 3d model could be made using any 3d software like maya or blender.
-
-in this project i used a 3d model of an ear for a medical application, 
-the user could manipulate the 3d object (zoom, rotate, ...) and add marks over the object.
-
-the 3d object used in this project could be remplaced by any other model 
+in 3dE project I demonstrate how to use a 3d model in WPF application using ModelVisual3D. the 3d model could be made using any 3d software like maya or blender.
 
 
 
